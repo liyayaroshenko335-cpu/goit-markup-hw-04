@@ -7,9 +7,6 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin-bottom: 0;
   margin-top: 0;
@@ -49,7 +46,6 @@ img {
 }
 
 .container {
-
   max-width: 1158px;
   margin: 0 auto;
   padding-left: 15px;
@@ -78,8 +74,8 @@ button {
 }
 
 /*!========HEDER====================*/
-/*<h2 class="visually-hidden" hidden>hed</h2>*/
-/*<h2 class="visually-hidden" hidden>fut</h2>*/
+
+
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
@@ -105,35 +101,21 @@ button {
 
 .logo-studio {
   color: #2e2f42;
-
 }
-
-/*.header-section {
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-}*/
-
-
-
 
 .header-navigation {
   display: flex;
-  align-items: center;
-
+  align-items: center; 
+  
 }
 
 .navigation-menu-list {
-  /*padding-top: 24px;
-  padding-bottom: 24px;*/
   display: flex;
   gap: 40px;
-  /*flex-grow: 1;*/
 }
 
 .navigation-menu-item {
- 
- display: flex;
+  display: flex;
 }
 
 .navigation-menu-link {
@@ -144,9 +126,31 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  font-family: "Roboto Medium",sans-serif;
-
+  font-family: "Roboto Medium",sans-serif; 
+  position: relative;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.navigation-menu-link.current {
+  color: #404bbf;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-menu-link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
+
+
 
 .navigation-menu-link:hover,
 .navigation-menu-link:focus {
@@ -162,19 +166,14 @@ button {
 .header-address-list {
   display: flex;
   gap: 40px;
-  
-  
-  
 }
 
 .header-address-item {
   display: flex;
-  
 }
 
 .header-address-link {
   display: inline-block;
-  
   align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -194,9 +193,15 @@ button {
 
 /*!========HERO========================*/
 .hero-section {
-  background: #2e2f42;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-color: #2e2f42;
+  color: #ffffff;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-img.jpg');
 }
 
 .hero-container {
@@ -208,9 +213,7 @@ button {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-
   color: #ffffff;
-
   max-width: 496px;
   margin-left: auto;
   margin-right: auto;
@@ -224,13 +227,15 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   margin: 0 auto;
   min-width: 169px;
   height: 56px;
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 .hero-button:hover,
@@ -246,8 +251,6 @@ button {
 }
 
 .features-item {
-
-
   width: calc((100% - 3 * 24px) / 4);
 }
 
@@ -281,7 +284,6 @@ button {
 
 .team {
   background-color: #f4f4fd;
-
 }
 
 .team-title {
@@ -301,24 +303,15 @@ button {
   justify-content: center;
 }
 
-
 .team-item {
-
   border-radius: 0 0 4px 4px;
-
   background-color: #ffffff;
   width: calc((100% - 3 * 24px) / 4);
-
 }
 
-
-
 .team-info {
-
   padding: 32px 0;
-
   text-align: center;
-
 }
 
 .team-image {
@@ -332,7 +325,6 @@ button {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -341,7 +333,6 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: #434455;
 }
 
@@ -363,10 +354,7 @@ button {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-
 }
-
-
 
 .portfolio-item {
   display: flex;
@@ -392,8 +380,6 @@ button {
   flex-direction: column;
 }
 
-
-
 .portfolio-subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -401,7 +387,6 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-
 }
 
 .portfolio-text {
@@ -415,9 +400,7 @@ button {
   overflow: hidden;
   position: relative;
   background: #4d5ae5;
-
 }
-
 
 .portfolio-card-text {
   font-size: 16px;
@@ -437,7 +420,6 @@ button {
 .footer {
   background: #2e2f42;
   padding: 100px 0;
-  
 }
 
 .footer-container {
@@ -469,7 +451,6 @@ button {
 
 .footer-logo-studio {
   color: #f4f4fd;
-
 }
 
 .footer-text {
@@ -478,5 +459,4 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
-  
 }
