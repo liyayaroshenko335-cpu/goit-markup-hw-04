@@ -481,7 +481,7 @@ button {
 }
 
 .portfolio-item:hover,
-.portfolio-overlay  {
+/*.portfolio-overlay*/  {
   transform: translateY(0%);
 }
 
