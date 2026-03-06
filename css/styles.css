@@ -480,8 +480,7 @@ button {
   border-top: none;
 }
 
-.portfolio-item:hover,
-/*.portfolio-overlay*/  {
+.portfolio-item:hover {
   transform: translateY(0%);
 }
 
