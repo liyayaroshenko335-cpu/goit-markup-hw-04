@@ -478,7 +478,7 @@ button {
   border-top: none;
 }
 
-.portfolio-item:hover .overlay {
+.portfolio-item:hover  {
   transform: translateY(0%);
 }
 
